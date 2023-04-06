@@ -1,0 +1,60 @@
+crear aplicación de notas 
+
+primero instalamos los modulos de node que vamos a utilizar 
+express
+express-handlebars -->integrar motor de plantillas
+express-session --> para crear sesiones dentro del servidor
+method-override --> metodo para extender la funcionalidad de los formularios (como put y delete)
+mongoose --> modulo para unir express con la base de datos de mongo db
+passport --> para autenticar 
+passport-local --> para autenticar tambien
+bcryptjs --> permite cifrar la contraseña de los usuarios 
+connect-flash --> para enviar mensajes entre multiples vistas, como cuando el usuario se equivoque o su contraseña no cumple los parametros de seguridad
+
+comienzo a escribir mi aplicación.
+
+promero creo la carpeta src con todas las carpetas correspondientes
+config --> almacenar distintos archivos como el archivo de las bases de datos o archivos de configuracion 
+helpers --> colocar funciones que el servidor puede utilizar 
+models --> para definir como van a ser los datos que almacenamos en la base de datos 
+public --> para que podamos insertar ls archivos estaticos que queremos que el navegador imprima en pantalla
+routes --> urls de nuestro servidor
+views --> almacenar archivos que vamos a enviar al navegador
+
+y los archivos index.js y database.js
+
+en index.js comenzamos a escribir 
+1) primero requerimos express y dividimos el codigo en secciones..
+copiar y pegar este codigo:
+
+const express = require ('express');
+
+//initializations
+const app = express();
+
+//Settings
+
+//Middlewares
+
+//Global Variables
+
+//Routes 
+
+//Static Files 
+
+//Server is listenning
+
+2) Configuramos nuestro puerto..
+--> en la seccion Settings:
+
+app.set('port', process.env.PORT || 300);
+
+(process.env.PORT HACE QUE SI EXISTE UN PUERTO EN NUESTRO COMPUTADOR QUE LO TOME, SINO USA EL 3000)
+
+
+3) Iniciamos nuestro servidor..
+-->en la seccion Server is Listenning llamamos a 'port'
+
+app.listen(app.get('port'));
+
+

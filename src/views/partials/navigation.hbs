@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container">
+    <a class="navbar-brand" style="color: antiquewhite" href="/">Notes App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" style="color: antiquewhite" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" style="color: antiquewhite" >About</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav"style="margin-left: auto;">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: antiquewhite"  >
+            Notes
+          </a>
+          <ul class="dropdown-menu bg-dark">
+            <li><a class="dropdown-item bg-dark" href="/notes" style="color: antiquewhite">All Notes</a></li>
+            <li><a class="dropdown-item bg-dark" href="/notes/add" style="color: antiquewhite">Add Note</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item bg-dark" href="/users/logout" style="color: antiquewhite">Logout</a></li>
+          </ul>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signin" style="color: antiquewhite">SignIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signup" style="color: antiquewhite">SignUp</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
